@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Лабаораторная работа №3</title>
+    </head>
+    <?php
+        $align = $_POST['align'] ?? 'left';
+        $valign = $_POST['valign'] ?? 'top';      
+        print "<table border = 1 height = 100 width = 100>";
+        print "<tr><td align = $align valign = $valign>Текст</td></tr>";
+        print "</table><br>";
+    ?>
+
+    <body>
+        <form action="#" method="post">
+            <h4>Выберите горизонтальное расположение:</h4>
+            <input type="radio" id="radio1" name="align" value="left">
+            <label for="radio1">слева</label><br>
+            <input type="radio" id="radio2" name="align" value="center">
+            <label for="radio2">по центру</label><br>
+            <input type="radio" id="radio3" name="align" value="right">
+            <label for="radio3">справа</label><br>
+
+            <h4>Выберите вертикальное расположение:</h4>
+            <input type="checkbox" id="check1" name="valign" value="top">
+            <label for="check1">сверху</label><br>
+            <input type="checkbox" id="check2" name="valign" value="middle">
+            <label for="check2">посередине</label><br>
+            <input type="checkbox" id="check3" name="valign" value="bottom">
+            <label for="check3">внизу</label><br><br>
+
+            <input type="submit" name="submit" value="Выполнить">
+        </form>
+    </body>
+</html>
